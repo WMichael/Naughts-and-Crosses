@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Naughts and Crosses</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="script.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div id="main" class="container">
-      <h1 class="text-center"><i>Naughts and Crosses</h1>
-        <div style="margin:auto;margin-bottom:10px;width:50%;"class="card bg-light text-dark">
-          <div id="status" style="text-align:center;" class="card-body"><h2>Player 1 <b>0 - 0</b> Player 2</h2></div>
-        </div>
-        <div style="text-align:center;margin-bottom:10px;">
-          <button style="display:none;" type="button" class="btn btn-success">Start Game</button>
-          <button onclick="Game.startGame(Player1, Player2)" type="button" class="btn btn-primary">Restart Game</button>
-          <button onclick="Game.changeStyle" type="button" class="btn btn-secondary">Change style</button>
-        </div>
-        <table style="width:400px;height:400px;margin:auto;" class="table table-bordered">
-          <tbody>
-            <tr>
-              <td onclick="Game.turn(0,0)"id="00"></td>
-              <td onclick="Game.turn(0,1)"id="01"></td>
-              <td onclick="Game.turn(0,2)"id="02"></td>
-            </tr>
-            <tr>
-              <td onclick="Game.turn(1,0)"id="10"></td>
-              <td onclick="Game.turn(1,1)"id="11"></td>
-              <td onclick="Game.turn(1,2)"id="12"></td>
-            </tr>
-            <tr>
-              <td onclick="Game.turn(2,0)"id="20"></td>
-              <td onclick="Game.turn(2,1)"id="21"></td>
-              <td onclick="Game.turn(2,2)"id="22"></td>
-            </tr>
-          </tbody>
-        </table>
+
+<head>
+  <meta charset="utf-8">
+  <title>Naughts and Crosses</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div id="main" class="container">
+    <h1 class="text-center"><i>Naughts and Crosses</h1>
+    <div id="scoreCard" class="card bg-light text-dark">
+      <div id="status" class="card-body">
+        <h2>Player 1 <b>0 - 0</b> Player 2</h2></div>
     </div>
-  </body>
+    <div id="buttons">
+      <button style="display:none;" type="button" class="btn btn-success">Start Game</button>
+      <button onclick="Game.startGame(Player1, Player2)" type="button" class="btn btn-primary">Restart Game</button>
+    </div>
+    <table id="tileTable" class="table table-bordered">
+      <tbody>
+        <tr>
+          <td onclick="Game.turn(0,0)" id="00"></td>
+          <td onclick="Game.turn(0,1)" id="01"></td>
+          <td onclick="Game.turn(0,2)" id="02"></td>
+        </tr>
+        <tr>
+          <td onclick="Game.turn(1,0)" id="10"></td>
+          <td onclick="Game.turn(1,1)" id="11"></td>
+          <td onclick="Game.turn(1,2)" id="12"></td>
+        </tr>
+        <tr>
+          <td onclick="Game.turn(2,0)" id="20"></td>
+          <td onclick="Game.turn(2,1)" id="21"></td>
+          <td onclick="Game.turn(2,2)" id="22"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
 </html>

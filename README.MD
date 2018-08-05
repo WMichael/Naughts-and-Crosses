@@ -4,3 +4,4 @@ My solution for the Tic Tac Toe project on the Javascript Course of the Odin Pro
 
 Link to the game: https://wmichael.github.io/Naughts-and-Crosses/
 
+
