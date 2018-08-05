@@ -1,20 +1,51 @@
+#main {}
+
 #scoreCard {
-margin:auto;
-margin-bottom:10px;
-width:50%;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 50%;
+  display: none
 }
 
 #status {
-  text-align:center;
+  text-align: center;
 }
 
 #buttons {
-  text-align:center;
-  margin-bottom:10px;
+  text-align: center;
+  margin-bottom: 10px;
+  display: none;
 }
 
 #tileTable {
-  width:400px;
-  height:400px;
-  margin:auto;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  display: none;
 }
+
+td {
+  height: 133px;
+  width: 133px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#startSection {
+  margin: auto;
+  text-align: center;
+}
+
+.vsSelector {
+  width: 200px;
+  height: 100px;
+  border: 3px solid black;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  padding: 15px;
+}
+
+.vsSelector:hover {
+  background-color: #4CAF50;
+  color: white;
