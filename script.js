@@ -52,6 +52,8 @@ const Game = (() => {
     player1 = p1;
     player2 = p2;
     currentPlayer = player1;
+    player1.reset();
+    player2.reset();
     updateStatus();
     Gameboard.resetBoard();
   }
