@@ -24,7 +24,27 @@ const Game = (() => {
   let currentPlayer;
   let player1;
   let player2;
-  let tileStyle = "hello"; // Styles for each tile. Left blank for default.
+  let tileStyle = ""; // Styles for each tile. Left blank for default.
+
+  // Change tile style
+  const changeStyle = (style) => {
+    defaultStyle = document.getElementById("defaultStyle");
+    hello = document.getElementById("helloKittyStyle");
+
+    if (style == "") {
+      tileStyle = "";
+      defaultStyle.style.backgroundColor = "#4CAF50";
+      defaultStyle.style.color = "white";
+      hello.style.backgroundColor = "";
+      hello.style.color = "black";
+    } else {
+      tileStyle = "hello";
+      hello.style.backgroundColor = "#4CAF50";
+      hello.style.color = "white";
+      defaultStyle.style.backgroundColor = "";
+      defaultStyle.style.color = "black";
+    }
+  }
 
   const greenTiles = (a, b, c, d, e, f) => {
     document.getElementById(a + "" + b).style.borderColor = "#4dff4d";
@@ -55,6 +75,10 @@ const Game = (() => {
     player1.reset();
     player2.reset();
     updateStatus();
+    document.getElementById("startSection").style.display = "none";
+    document.getElementById("scoreCard").style.display = "block";
+    document.getElementById("buttons").style.display = "block";
+    document.getElementById("tileTable").style.display = "block";
     Gameboard.resetBoard();
   }
 
@@ -137,7 +161,8 @@ const Game = (() => {
 
   return {
     startGame,
-    turn
+    turn,
+    changeStyle
   };
 })();
 
@@ -155,6 +180,14 @@ function Player(name, symbol) {
 
 var Player1 = new Player("Player 1", "x");
 var Player2 = new Player("Player 2", "o");
-window.onload = function() {
+
+function startGameButtonClick() {
   Game.startGame(Player1, Player2);
+}
+
+function startMenuButtonClick() {
+  document.getElementById("startSection").style.display = "block";
+  document.getElementById("scoreCard").style.display = "none";
+  document.getElementById("buttons").style.display = "none";
+  document.getElementById("tileTable").style.display = "none";
 }
