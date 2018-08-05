@@ -8,21 +8,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script src="script.js" charset="utf-8"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
   <div id="main" class="container">
     <h1 class="text-center"><i>Naughts and Crosses</h1>
-    <div style="margin:auto;margin-bottom:10px;width:50%;" class="card bg-light text-dark">
-      <div id="status" style="text-align:center;" class="card-body">
+    <div id="scoreCard" class="card bg-light text-dark">
+      <div id="status" class="card-body">
         <h2>Player 1 <b>0 - 0</b> Player 2</h2></div>
     </div>
-    <div style="text-align:center;margin-bottom:10px;">
+    <div id="buttons">
       <button style="display:none;" type="button" class="btn btn-success">Start Game</button>
       <button onclick="Game.startGame(Player1, Player2)" type="button" class="btn btn-primary">Restart Game</button>
     </div>
-    <table style="width:400px;height:400px;margin:auto;" class="table table-bordered">
+    <table id="tileTable" class="table table-bordered">
       <tbody>
         <tr>
           <td onclick="Game.turn(0,0)" id="00"></td>
