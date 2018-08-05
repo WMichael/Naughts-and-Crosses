@@ -14,35 +14,38 @@
 
 <body>
   <div id="main" class="container">
-    <h1 class="text-center"><i>Naughts and Crosses</h1>
-    <div id="scoreCard" class="card bg-light text-dark">
-      <div id="status" class="card-body">
-        <h2>Player 1 <b>0 - 0</b> Player 2</h2></div>
-    </div>
-    <div id="buttons">
-      <button style="display:none;" type="button" class="btn btn-success">Start Game</button>
-      <button onclick="Game.startGame(Player1, Player2)" type="button" class="btn btn-primary">Restart Game</button>
-    </div>
-    <table id="tileTable" class="table table-bordered">
-      <tbody>
-        <tr>
-          <td onclick="Game.turn(0,0)" id="00"></td>
-          <td onclick="Game.turn(0,1)" id="01"></td>
-          <td onclick="Game.turn(0,2)" id="02"></td>
-        </tr>
-        <tr>
-          <td onclick="Game.turn(1,0)" id="10"></td>
-          <td onclick="Game.turn(1,1)" id="11"></td>
-          <td onclick="Game.turn(1,2)" id="12"></td>
-        </tr>
-        <tr>
-          <td onclick="Game.turn(2,0)" id="20"></td>
-          <td onclick="Game.turn(2,1)" id="21"></td>
-          <td onclick="Game.turn(2,2)" id="22"></td>
-        </tr>
-      </tbody>
-    </table>
+    <header>
+      <h1 class="text-center"><i>Naughts and Crosses</h1>
+      <div id="scoreCard" class="card bg-light text-dark">
+        <div id="status" class="card-body">
+          <h2>Player 1 <b>0 - 0</b> Player 2</h2></div>
+      </div>
+      <div id="buttons">
+        <button style="display:none;" type="button" class="btn btn-success">Start Game</button>
+        <button onclick="Game.startGame(Player1, Player2)" type="button" class="btn btn-primary">Restart Game</button>
+      </div>
+    </header>
+    <section>
+      <table id="tileTable" class="table table-bordered">
+        <tbody>
+          <tr>
+            <td onclick="Game.turn(0,0)" id="00"></td>
+            <td onclick="Game.turn(0,1)" id="01"></td>
+            <td onclick="Game.turn(0,2)" id="02"></td>
+          </tr>
+          <tr>
+            <td onclick="Game.turn(1,0)" id="10"></td>
+            <td onclick="Game.turn(1,1)" id="11"></td>
+            <td onclick="Game.turn(1,2)" id="12"></td>
+          </tr>
+          <tr>
+            <td onclick="Game.turn(2,0)" id="20"></td>
+            <td onclick="Game.turn(2,1)" id="21"></td>
+            <td onclick="Game.turn(2,2)" id="22"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </div>
 </body>
-
 </html>
