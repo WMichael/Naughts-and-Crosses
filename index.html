@@ -13,10 +13,10 @@
 </head>
 
 <body>
-  <div id="main" class="container">
-    <header>
-      <h1 class="text-center"><i>Naughts and Crosses</h1>
-      <div id="scoreCard" class="card bg-light text-dark">
+  <h1 id="title" class="text-center shadow p-3">Naughts and Crosses</h1>
+  <header>
+    <div id="main" class="container">
+      <div id="scoreCard" class="card bg-light shadow-sm text-dark">
         <div id="status" class="card-body">
           <h2>Player 1 <b>0 - 0</b> Player 2</h2></div>
       </div>
@@ -25,39 +25,39 @@
         <button onclick="Game.startGame(Player1, Player2)" type="button" class="btn btn-primary">Restart Game</button>
         <button onclick="startMenuButtonClick()" type="button" class="btn btn-primary">Start menu</button>
       </div>
-    </header>
-    <section>
-      <table id="tileTable" class="table table-bordered">
-        <tbody>
-          <tr>
-            <td onclick="Game.turn(0,0)" id="00"></td>
-            <td onclick="Game.turn(0,1)" id="01"></td>
-            <td onclick="Game.turn(0,2)" id="02"></td>
-          </tr>
-          <tr>
-            <td onclick="Game.turn(1,0)" id="10"></td>
-            <td onclick="Game.turn(1,1)" id="11"></td>
-            <td onclick="Game.turn(1,2)" id="12"></td>
-          </tr>
-          <tr>
-            <td onclick="Game.turn(2,0)" id="20"></td>
-            <td onclick="Game.turn(2,1)" id="21"></td>
-            <td onclick="Game.turn(2,2)" id="22"></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section id="startSection">
-      <h3><strong>Choose your opponent</strong></h3>
-      <button class="vsSelector" style="background-color:#4CAF50;color:white;">Vs Human</button>
-      <div style="display:none;" class="vsSelector">
-        <h2>Vs Computer</h2>
-      </div>
-      <h3><strong>Choose your style</strong></h3>
-      <button onclick="Game.changeStyle('')" id="defaultStyle" class="vsSelector" style="background-color:#4CAF50;color:white;">Default</button>
-      <button onclick="Game.changeStyle('hello')" id="helloKittyStyle" class="vsSelector"> Hello Kitty </button>
-      <button onclick="startGameButtonClick()" type="button" style="width:500px;margin:auto;margin-top:10px;display:block;" class="btn btn-success btn-lg">Start Game</button>
-    </section>
+  </header>
+  <section>
+    <table id="tileTable" class="table table-bordered">
+      <tbody>
+        <tr>
+          <td onclick="Game.turn(0,0)" id="00"></td>
+          <td onclick="Game.turn(0,1)" id="01"></td>
+          <td onclick="Game.turn(0,2)" id="02"></td>
+        </tr>
+        <tr>
+          <td onclick="Game.turn(1,0)" id="10"></td>
+          <td onclick="Game.turn(1,1)" id="11"></td>
+          <td onclick="Game.turn(1,2)" id="12"></td>
+        </tr>
+        <tr>
+          <td onclick="Game.turn(2,0)" id="20"></td>
+          <td onclick="Game.turn(2,1)" id="21"></td>
+          <td onclick="Game.turn(2,2)" id="22"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="startSection">
+    <h3><strong>Choose your opponent</strong></h3>
+    <button class="vsSelector" style="background-color:#4CAF50;color:white;">Vs Human</button>
+    <div style="display:none;" class="vsSelector">
+      <h2>Vs Computer</h2>
+    </div>
+    <h3><strong>Choose your style</strong></h3>
+    <button onclick="Game.changeStyle('')" id="defaultStyle" class="vsSelector" style="background-color:#4CAF50;color:white;">Default</button>
+    <button onclick="Game.changeStyle('hello')" id="helloKittyStyle" class="vsSelector"> Hello Kitty </button>
+    <button onclick="startGameButtonClick()" type="button" style="width:500px;margin:auto;margin-top:10px;display:block;" class="btn btn-success btn-lg">Start Game</button>
+  </section>
   </div>
 </body>
 
